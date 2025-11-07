@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Django
+*.sqlite3
+db.sqlite3
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.pot
+*.mo
+*.log
+*.pid
+*.swp
+*.swo
+*.bak
+*.tmp
+*.orig
+*.coverage
+*.env
+*.env.*
+.envrc
+.env.local
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Static and media files
+/staticfiles/
+/media/
+
+# Migrations
+**/migrations/
+
