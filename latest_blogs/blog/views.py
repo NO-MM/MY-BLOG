@@ -10,6 +10,8 @@ def blog_create(request):
     if request.method == 'POST':
         title = request.POST.get('title')
         content = request.POST.get('content')
-        BlogPost.objects.create(title=title, content=content)
+        image = request.FILES.get('image')
+        
+        BlogPost.objects.create(title=title, content=content, image=image)
         return redirect('my_blog_list')
     return render(request, 'blog_create.html')
