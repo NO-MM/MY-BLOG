@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Blog</title>
+    <link rel="stylesheet" href="{% static 'blog/styles.css' %}">
 </head>
 <body>
     <h1>Create a New Blog</h1>
+
+<div class="form-container">
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <label>Title:</label><br>
-        <input type="text" name="title"><br><br>
+        <input type="text" name="title" class="form-input"><br><br>
 
         <label>Image:</label><br>
-        <input type="file" name="image"><br><br>
+        <input type="file" name="image" class="form-input"><br><br>
         
         <label>Content:</label><br>
-        <textarea name="content" rows="5" cols="40"></textarea>
+        <textarea name="content" rows="5" cols="40" class="form-textarea"></textarea><br><br>
 
-        <button type="submit">Submit</button>
+        <button type="submit" class="form-button">Submit</button>
     </form>
     <a href="{% url 'my_blog_list' %}">Back to Blogs</a>
 </body>
